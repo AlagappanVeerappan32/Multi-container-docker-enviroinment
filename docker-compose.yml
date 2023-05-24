@@ -1,0 +1,21 @@
+services:
+  container1:
+    image: alex3832/dockerassignment-container1:container1
+    ports:
+      - 6000:6000
+    networks:
+      - my-network-B00946176
+    volumes:
+      - ./file.dat:/app/file.dat
+
+  container2:
+    image: alex3832/dockerassignment-container2:container2
+    ports:
+      - 8080:8080
+    networks:
+      - my-network-B00946176
+    volumes:
+      - ./file.dat:/app/file.dat
+
+networks:
+  my-network-B00946176:
